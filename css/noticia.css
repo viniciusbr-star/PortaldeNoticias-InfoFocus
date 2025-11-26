@@ -1,0 +1,108 @@
+.faixa-politica {
+    background-color: var(--cor-primaria);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faixa-politica h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.cabecalho-noticia {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.cabecalho-noticia h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.olho-noticia {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.botoes-social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.btn-social {
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.btn-social:hover {
+    opacity: 0.8;
+}
+
+.corpo-noticia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 100px;
+}
+
+.coluna-foto {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.coluna-texto-artigo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.coluna-texto-artigo p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+@media (max-width: 900px) {
+    .corpo-noticia {
+        grid-template-columns: 1fr;
+    }
+    .coluna-foto {
+        height: 250px;
+    }
+    .botoes-social {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-social {
+        width: 100%;
+        max-width: 300px;
+    }
+}
