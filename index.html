@@ -14,11 +14,11 @@
 
     <header class="cabecalho-topo">
         <div class="conteiner flex-topo">
-            <div class="slogan">
-                <h1>A Notícia Perto de<br>Você</h1>
-            </div>
             <div class="logo">
                 Info<span>Focus</span>
+            </div>
+            <div class="slogan">
+                <h1>A Notícia Perto de<br>Você</h1>
             </div>
         </div>
     </header>
@@ -26,31 +26,29 @@
     <nav class="barra-navegacao">
         <div class="conteiner flex-nav">
             <ul class="lista-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="noticia.html">Notícia do Dia</a></li>
-                <li><a href="#">Categorias ▾</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html" class="header-link">Início</a></li>
+                <li><a href="noticia.html" class="header-link">Notícia do Dia</a></li>
+                <li><a href="#" class="header-link">Categorias ▾</a></li>
+                <li><a href="contato.html" class="header-link">Contato</a></li>
             </ul>
+
             <div class="caixa-pesquisa">
                 <input type="text" placeholder="Buscar..">
                 <button type="submit">🔍</button>
             </div>
+
         </div>
     </nav>
 
     <main class="conteiner">
-
-
-
         <div class="layout-grid">
-
             <div class="coluna-esquerda">
+                <h3>Notícias em Destaque</h3>
 
-                <h3>Notícias em destaque</h3>
                 <section class="grid-manchetes">
-                    <article class="cartao destaque-zao">
-                        <img src="img/otan.png" alt="Descrição da imagem" class="img-cover">
 
+                    <article class="cartao destaque-zao">
+                        <img src="img/otan.png" alt="Otan" class="img-cover">
                         <div class="texto-sobreposto">
                             <h2>Tensões na OTAN aumentam após cúpula</h2>
                         </div>
@@ -58,71 +56,103 @@
 
                     <div class="sub-grid">
                         <article class="cartao pequeno">
-                            <img src="img/pl-antifaccao.png" alt="Descrição da imagem" class="img-cover">
+                            <img src="img/pl-antifaccao.png" alt="Lei" class="img-cover">
                             <div class="texto-sobreposto">
                                 <h2>Projeto de Lei Antifacção</h2>
                             </div>
                         </article>
 
                         <article class="cartao pequeno">
-                            <img src="img/enem-fraude.png" alt="Descrição da imagem" class="img-cover">
+                            <img src="img/enem-fraude.png" alt="Enem" class="img-cover">
                             <div class="texto-sobreposto">
-                                <h2>Fraude no Enem</h2>
+                                <h2>Fraude no Enem investigada</h2>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <section class="secao-reviews">
-                    <h2>Análises Tech</h2>
+                <section class="grid-inferior">
 
-                    <article class="card-horizontal">
-                        <div class="img-horizontal-wrapper">
-                            <img src="img/notebook.jpg" alt="Descrição da imagem" class="img-cover">
-                        </div>
-                        <div class="texto-horizontal">
-                            <h3>Review: O novo notebook ultra-fino</h3>
-                            <p>Testamos o desempenho e bateria...</p>
-                            <a href="#" class="link-pequeno">Ler análise completa</a>
+                    <article class="cartao pequeno">
+                        <img src="img/notebook.jpg" alt="Tecnologia" class="img-cover">
+                        <div class="texto-sobreposto">
+                            <h2>Novos notebooks chegam ao mercado</h2>
                         </div>
                     </article>
 
-                    <article class="card-horizontal">
-                        <div class="img-horizontal-wrapper">
-                            <img src="img/x200.jpg" alt="Descrição da imagem" class="img-cover">
-                        </div>
-                        <div class="texto-horizontal">
-                            <h3>Drone X200: Vale o investimento?</h3>
-                            <p>Colocamos o drone à prova...</p>
-                            <a href="#" class="link-pequeno">Ler análise completa</a>
+                    <article class="cartao pequeno">
+                        <img src="img/cv-kennedy.png" alt="kennedy" class="img-cover">
+                        <div class="texto-sobreposto">
+                            <h2>Tiroteio na Vila kennedy</h2>
                         </div>
                     </article>
+
+                    <article class="cartao pequeno">
+                        <img src="img/notebook.jpg" alt="Saúde" class="img-cover">
+                        <div class="texto-sobreposto">
+                            <h2>Avanços na cura da dengue</h2>
+                        </div>
+                    </article>
+
                 </section>
-
             </div>
-            <aside class="barra-lateral">
+            </section>
 
-                <div class="widget">
-                    <h4>Categorias</h4>
-                    <ul class="lista-categorias">
-                        <li><a href="#">Política Nacional</a></li>
-                        <li><a href="#">Economia Global</a></li>
-                        <li><a href="#">Tecnologia</a></li>
-                        <li><a href="#">Esportes</a></li>
-                    </ul>
-                </div>
 
-                <div class="widget">
-                    <h4>Mais Lidas</h4>
-                    <ol class="lista-mais-lidas">
-                        <li><a href="#">Como declarar Imposto</a></li>
-                        <li><a href="#">Avanço da IA no trabalho</a></li>
-                        <li><a href="#">Resultados do Futebol</a></li>
-                        <li><a href="#">Previsão do tempo</a></li>
-                    </ol>
-                </div>
 
-            </aside>
+            <section class="secao-reviews">
+                <h2>Análises Tech</h2>
+
+                <article class="card-horizontal">
+                    <div class="img-horizontal-wrapper">
+                        <img src="img/nintendo.jpg" alt="Descrição da imagem" class="img-cover">
+                    </div>
+                    <div class="texto-horizontal">
+                        <h3>Review: O novo notebook ultra-fino</h3>
+                        <p>Testamos o desempenho e bateria...</p>
+                        <a href="#" class="link-pequeno">Ler análise completa</a>
+                    </div>
+                </article>
+
+                <article class="card-horizontal">
+                    <div class="img-horizontal-wrapper">
+                        <img src="img/x200.jpg" alt="Descrição da imagem" class="img-cover">
+                    </div>
+                    <div class="texto-horizontal">
+                        <h3>Drone X200: Vale o investimento?</h3>
+                        <p>Colocamos o drone à prova...</p>
+                        <a href="" class="link-pequeno">Ler análise completa</a>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+        <aside class="barra-lateral">
+
+            <div class="widget">
+                <h4>Categorias</h4>
+                <ul class="lista-categorias">
+                    <li><a href="#">Política Nacional</a></li>
+                    <li><a href="#">Economia Global</a></li>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Esportes</a></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h4>Mais Lidas</h4>
+                <ol class="lista-mais-lidas">
+                    <li><a href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda" class="lidas">Como
+                            declarar Imposto</a></li>
+                    <li><a href="https://www.gupy.io/blog/ia-mercado-trabalho" class="lidas">Avanço da IA no
+                            trabalho</a></li>
+                    <li><a href="https://www.sofascore.com/pt/" class="lidas">Resultados do Futebol</a></li>
+                    <li><a href="https://www.climatempo.com.br/previsao-do-tempo/agora/cidade/500/osvaldocruz-sp"
+                            class="lidas">Previsão do tempo</a></li>
+                </ol>
+            </div>
+
+        </aside>
 
         </div>
     </main>
@@ -152,6 +182,7 @@
                     <i class="bi bi-facebook"></i>
                     <i class="bi bi-twitter"></i>
                     <i class="bi bi-instagram"></i>
+                    <i class="bi bi-linkedin"></i>
                 </div>
             </div>
 
@@ -171,7 +202,7 @@
         </div>
         <div class="footer-bottom">
             <div class="conteiner">
-                <p>&copy; 2024 InfoFocus. Todos os direitos reservados.</p>
+                <p>&copy; 2025 InfoFocus. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>

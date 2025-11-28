@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InfoFocus - Contato</title>
     <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -36,121 +38,136 @@
         </div>
     </nav>
 
-   <main class="conteiner">
-    <div class="grid-contato">
-        
-        <section class="area-formulario">
-            <h2 class="titulo-sessao">Fale Conosco</h2>
-            
-            <div class="card-vermelho">
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    
-                    <div class="grupo-input">
-                        <label for="nome">Nome Completo *:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-                    </div>
+    <main class="conteiner">
+        <div class="grid-contato">
 
-                    <div class="grid-duplo">
+            <section class="area-formulario">
+                <h2 class="titulo-sessao">Fale Conosco</h2>
+
+                <div class="card-vermelho">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+
                         <div class="grupo-input">
-                            <label for="email">Email *:</label>
-                            <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                            <label for="nome">Nome Completo *:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
                         </div>
+
+                        <div class="grid-duplo">
+                            <div class="grupo-input">
+                                <label for="email">Email *:</label>
+                                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                            </div>
+                            <div class="grupo-input">
+                                <label for="telefone">Telefone *:</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX"
+                                    pattern="\(\d{2}\)\s\d{4,5}-\d{4}" title="Digite no formato (XX) XXXXX-XXXX"
+                                    required>
+                            </div>
+                        </div>
+
                         <div class="grupo-input">
-                            <label for="telefone">Telefone *:</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" title="Digite no formato (XX) XXXXX-XXXX" required>
+                            <label for="assunto">Assunto:</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>Selecione um assunto...</option>
+                                <option value="sugestao">Sugestão de Pauta</option>
+                                <option value="comercial">Anúncio / Comercial</option>
+                                <option value="suporte">Erro no site</option>
+                                <option value="outros">Outros</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="grupo-input">
-                        <label for="assunto">Assunto:</label>
-                        <select id="assunto" name="assunto" required>
-                            <option value="" disabled selected>Selecione um assunto...</option>
-                            <option value="sugestao">Sugestão de Pauta</option>
-                            <option value="comercial">Anúncio / Comercial</option>
-                            <option value="suporte">Erro no site</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                    </div>
-
-                    <div class="grupo-input">
-                        <label>Você é:</label>
-                        <div class="radios-wrapper">
-                            <label class="radio-label">
-                                <input type="radio" name="tipo_pessoa" value="fisica" checked> Pessoa Física
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="tipo_pessoa" value="juridica"> Pessoa Jurídica
-                            </label>
+                        <div class="grupo-input">
+                            <label>Você é:</label>
+                            <div class="radios-wrapper">
+                                <label class="radio-label">
+                                    <input type="radio" name="tipo_pessoa" value="fisica" checked> Pessoa Física
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="tipo_pessoa" value="juridica"> Pessoa Jurídica
+                                </label>
+                            </div>
                         </div>
+
+                        <div class="grupo-input">
+                            <label for="mensagem">Sua Notícia / Mensagem *:</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite aqui..."
+                                required></textarea>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label for="anexo">Enviar Anexo (Foto/Doc):</label>
+                            <input type="file" id="anexo" name="anexo" class="input-arquivo">
+                        </div>
+
+                        <div class="grupo-input checkbox-wrapper">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">Li e aceito os <a href="#" style="text-decoration: underline;">Termos de
+                                    Privacidade</a>.</label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">Enviar Dados</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="area-info">
+                <h2 class="titulo-sessao">Informações</h2>
+
+                <div class="card-vermelho">
+                    <div class="info-texto">
+                        <h3>Endereço</h3>
+                        <p>Av. Pref. Valdemar de Oliveira Lima, 1000<br>Osvaldo Cruz, SP</p>
+
+                        <h3>Contato Direto</h3>
+                        <p>(18) 3528-2632<br>contato@infofocus.com</p>
                     </div>
 
-                    <div class="grupo-input">
-                        <label for="mensagem">Sua Notícia / Mensagem *:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite aqui..." required></textarea>
+                    <div class="tabela-wrapper">
+                        <h3>Horário de Atendimento</h3>
+                        <table class="tabela-horarios">
+                            <thead>
+                                <tr>
+                                    <th>Dia</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Seg - Sex</td>
+                                    <td>08:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado</td>
+                                    <td>08:00 - 12:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo</td>
+                                    <td>Fechado</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="grupo-input">
-                        <label for="anexo">Enviar Anexo (Foto/Doc):</label>
-                        <input type="file" id="anexo" name="anexo" class="input-arquivo">
-                    </div>
-
-                    <div class="grupo-input checkbox-wrapper">
-                        <input type="checkbox" id="termos" name="termos" required>
-                        <label for="termos">Li e aceito os <a href="#" style="text-decoration: underline;">Termos de Privacidade</a>.</label>
-                    </div>
-                    
-                    <button type="submit" class="btn-enviar">Enviar Dados</button>
-                </form>
-            </div>
-        </section>
-
-        <section class="area-info">
-            <h2 class="titulo-sessao">Informações</h2>
-
-            <div class="card-vermelho">
-                <div class="info-texto">
-                    <h3>Endereço</h3>
-                    <p>Av. Pref. Valdemar de Oliveira Lima, 1000<br>Osvaldo Cruz, SP</p>
-
-                    <h3>Contato Direto</h3>
-                    <p>(18) 3528-2632<br>contato@infofocus.com</p>
+                    <div class="mapa-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.533256123456!2d-50.8841!3d-21.794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQ3JzM4LjQiUyA1MMKwNTMnMDIuOCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="siganos">
+                            <h3>Siga-nos nas redes sociais:</h3>
+                            <div class="icones-redes">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
                 </div>
 
-                <div class="tabela-wrapper">
-                    <h3>Horário de Atendimento</h3>
-                    <table class="tabela-horarios">
-                        <thead>
-                            <tr>
-                                <th>Dia</th>
-                                <th>Horário</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Seg - Sex</td>
-                                <td>08:00 - 18:00</td>
-                            </tr>
-                            <tr>
-                                <td>Sábado</td>
-                                <td>08:00 - 12:00</td>
-                            </tr>
-                            <tr>
-                                <td>Domingo</td>
-                                <td>Fechado</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            </section>
 
-                <div class="mapa-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.533256123456!2d-50.8841!3d-21.794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQ3JzM4LjQiUyA1MMKwNTMnMDIuOCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" 
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
-
-    </div>
-</main>
+        </div>
+    </main>
 
     <footer class="site-footer">
         <div class="conteiner footer-grid">

@@ -566,6 +566,29 @@ ul, ol {
     filter: grayscale(20%);
 }
 
+.siganos{
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.icones-redes {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+i {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+i:hover {
+    color: #000000;
+}
+
 /* --- Footer --- */
 .site-footer {
     background-color: #333; 

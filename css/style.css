@@ -44,19 +44,24 @@ ul {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #003366;
 }
 
 .logo span {
-    color: #a52a2a;
+    color: #e48282;
 }
 
 .barra-navegacao {
     background-color: var(--cor-primaria);
     padding: 15px 0;
     color: white;
+}
+
+.slogan h1 {
+    font-size: 1.8rem;
+    color: #1d0a36;
 }
 
 .flex-nav {
@@ -112,11 +117,126 @@ ul {
     margin-top: 30px;
 }
 
+/* --- GRID PRINCIPAL (Onde tem a manchete grande e as 2 laterais) --- */
 .grid-manchetes {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 partes para o grandão, 1 para a lateral */
+    gap: 20px;
+    margin-bottom: 20px;
+    /* REMOVI o height: 400px fixo do pai para evitar o bug de sobreposição */
+}
+
+/* O cartão grandão da esquerda */
+.destaque-zao {
+    height: 400px; /* Ele segura a altura da seção */
+}
+
+/* A coluna da direita com os 2 cards */
+.sub-grid {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 40px;
+    flex-direction: column; /* Um embaixo do outro */
+    gap: 20px;
+    height: 400px; /* Mesma altura do grandão para alinhar */
+}
+
+/* Os 2 cartões menores da direita */
+.sub-grid .cartao {
+    flex: 1; /* Divide o espaço igualmente (50% cada) */
+    height: 100%; /* Garante que preencha o espaço */
+}
+
+/* --- GRID INFERIOR (A nova linha com 3 cards) --- */
+.grid-inferior {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px;
+    margin-bottom: 40px; 
+    margin-top: 20px; /* Garante espaço entre as seções */
+}
+
+/* Altura fixa para os cards da linha de baixo ficarem iguais */
+.grid-inferior .cartao {
+    height: 200px; 
+}
+
+/* --- REGRAS GERAIS DE IMAGEM (Para não distorcer) --- */
+.cartao {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000; /* Fundo preto caso a imagem falhe */
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A mágica: corta a imagem para caber sem esticar */
+    display: block;
+}
+
+/* --- TEXTO SOBRE A IMAGEM --- */
+.texto-sobreposto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVO (Celular) */
+@media (max-width: 768px) {
+    .grid-manchetes, 
+    .grid-inferior {
+        grid-template-columns: 1fr; /* Tudo em 1 coluna */
+        height: auto;
+    }
+    
+    .destaque-zao, 
+    .sub-grid,
+    .grid-inferior .cartao {
+        height: 250px; /* Altura padrão no celular */
+        margin-bottom: 10px;
+    }
+}
+
+/* Garante que a imagem preencha tudo */
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.texto-sobreposto h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* --- RESPONSIVO (Celular) --- */
+@media (max-width: 768px) {
+    .grid-manchetes, 
+    .grid-inferior {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .cartao {
+        height: 200px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Estilo dos Cartões */
@@ -212,6 +332,34 @@ ul {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
+}
+
+.lidas:hover {
+    color: var(--cor-primaria);
+    text-decoration: underline;
+}
+
+.lista-mais-lidas li {
+    list-style-position: inside;
+}
+
+.header-link {
+    font-weight: bold;
+}
+
+.header-link:hover {
+    color: #4b5352;
+}
+
+
+.submit{
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .lista-categorias li, 
@@ -379,4 +527,21 @@ ul {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+.social-links {
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.social-links i {
+    font-size: 20px;
+    color: #ccc;
+    margin-right: 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links i:hover {
+    color: var(--cor-primaria);
+    transform: scale(1.2);
 }
