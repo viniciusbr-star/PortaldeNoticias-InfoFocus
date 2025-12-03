@@ -7,11 +7,9 @@
     <title>InfoFocus - News</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
     <header class="cabecalho-topo">
         <div class="conteiner flex-topo">
             <div class="logo">
@@ -28,7 +26,16 @@
             <ul class="lista-menu">
                 <li><a href="index.html" class="header-link">Início</a></li>
                 <li><a href="noticia.html" class="header-link">Notícia do Dia</a></li>
-                <li><a href="#" class="header-link">Categorias ▾</a></li>
+                <li class="dropdown">
+                    <a href="#">Noticias ▾</a>
+                    <ul class="submenu">
+                        <li><a href="noticia.html">Política</a></li>
+                        <li><a href="https://g1.globo.com/economia/">Economia</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/esportes/">Esportes</a></li>
+                        <li><a href="https://g1.globo.com/tecnologia/">Tecnologia</a></li>
+                        <li><a href="https://g1.globo.com/saude/">Saúde</a></li>
+                    </ul>
+                </li>
                 <li><a href="contato.html" class="header-link">Contato</a></li>
             </ul>
 
@@ -88,71 +95,71 @@
                     </article>
 
                     <article class="cartao pequeno">
-                        <img src="img/notebook.jpg" alt="Saúde" class="img-cover">
+                        <img src="img/dengue.png" alt="Saúde" class="img-cover">
                         <div class="texto-sobreposto">
                             <h2>Avanços na cura da dengue</h2>
                         </div>
                     </article>
 
-                </section>
+                    <section class="secao-reviews">
+                        <h2>Análises Tech</h2>
+                        <div class="secaotech">
+                            <article class="card-horizontal">
+                                <div class="img-horizontal-wrapper">
+                                    <img src="img/ultrafino.jpg" alt="Descrição da imagem" class="img-cover">
+                                </div>
+                                <div class="texto-horizontal">
+                                    <h3>Review: O novo notebook ultra-fino</h3>
+                                    <p>Testamos o desempenho e bateria...</p>
+                                    <a href="https://www.youtube.com/watch?v=CS6MNBrnYo0" class="link-pequeno">Ler
+                                        análise completa</a>
+                                </div>
+                            </article>
+
+                            <article class="card-horizontal">
+                                <div class="img-horizontal-wrapper">
+                                    <img src="img/x200.jpg" alt="Descrição da imagem" class="img-cover">
+                                </div>
+                                <div class="texto-horizontal">
+                                    <h3>Drone X200: Vale o investimento?</h3>
+                                    <p>Colocamos o drone à prova...</p>
+                                    <a href="https://www.youtube.com/watch?v=IVgmN4BoIEQ" class="link-pequeno">Ler
+                                        análise completa</a>
+                                </div>
+                            </article>
+
+
+                        </div>
+                    </section>
+
             </div>
-            </section>
 
+            <aside class="barra-lateral">
+                <div class="widget">
+                    <h4>Categorias</h4>
+                    <ul class="lista-categorias">
+                        <li><a href="https://www.cnnbrasil.com.br/educacao/">Educação</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/tudo-sobre/inteligencia-artificial/">Inteligência
+                                Artificial</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/tudo-sobre/crime/">Crimes</a></li>
+                        <li><a href="https://www.cnnbrasil.com.br/tudo-sobre/comercio/">Comércio</a></li>
+                    </ul>
+                </div>
 
-
-            <section class="secao-reviews">
-                <h2>Análises Tech</h2>
-
-                <article class="card-horizontal">
-                    <div class="img-horizontal-wrapper">
-                        <img src="img/nintendo.jpg" alt="Descrição da imagem" class="img-cover">
-                    </div>
-                    <div class="texto-horizontal">
-                        <h3>Review: O novo notebook ultra-fino</h3>
-                        <p>Testamos o desempenho e bateria...</p>
-                        <a href="#" class="link-pequeno">Ler análise completa</a>
-                    </div>
-                </article>
-
-                <article class="card-horizontal">
-                    <div class="img-horizontal-wrapper">
-                        <img src="img/x200.jpg" alt="Descrição da imagem" class="img-cover">
-                    </div>
-                    <div class="texto-horizontal">
-                        <h3>Drone X200: Vale o investimento?</h3>
-                        <p>Colocamos o drone à prova...</p>
-                        <a href="" class="link-pequeno">Ler análise completa</a>
-                    </div>
-                </article>
-            </section>
-
+                <div class="widget">
+                    <h4>Mais Lidas</h4>
+                    <ol class="lista-mais-lidas">
+                        <li><a href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda" class="lidas">Como
+                                declarar Imposto</a></li>
+                        <li><a href="https://www.gupy.io/blog/ia-mercado-trabalho" class="lidas">Avanço da IA no
+                                trabalho</a></li>
+                        <li><a href="https://www.sofascore.com/pt/" class="lidas">Resultados do Futebol</a></li>
+                        <li><a href="https://www.climatempo.com.br/previsao-do-tempo/agora/cidade/500/osvaldocruz-sp"
+                                class="lidas">Previsão do tempo</a></li>
+                    </ol>
+                </div>
+            </aside>
         </div>
-        <aside class="barra-lateral">
-
-            <div class="widget">
-                <h4>Categorias</h4>
-                <ul class="lista-categorias">
-                    <li><a href="#">Política Nacional</a></li>
-                    <li><a href="#">Economia Global</a></li>
-                    <li><a href="#">Tecnologia</a></li>
-                    <li><a href="#">Esportes</a></li>
-                </ul>
-            </div>
-
-            <div class="widget">
-                <h4>Mais Lidas</h4>
-                <ol class="lista-mais-lidas">
-                    <li><a href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda" class="lidas">Como
-                            declarar Imposto</a></li>
-                    <li><a href="https://www.gupy.io/blog/ia-mercado-trabalho" class="lidas">Avanço da IA no
-                            trabalho</a></li>
-                    <li><a href="https://www.sofascore.com/pt/" class="lidas">Resultados do Futebol</a></li>
-                    <li><a href="https://www.climatempo.com.br/previsao-do-tempo/agora/cidade/500/osvaldocruz-sp"
-                            class="lidas">Previsão do tempo</a></li>
-                </ol>
-            </div>
-
-        </aside>
 
         </div>
     </main>
@@ -189,11 +196,10 @@
             <div class="footer-col">
                 <h4>Navegação</h4>
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Notícia do Dia</a></li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="noticia.html">Notícia do Dia</a></li>
                     <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
 
