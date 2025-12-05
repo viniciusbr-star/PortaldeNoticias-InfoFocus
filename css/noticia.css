@@ -184,7 +184,6 @@ body {
   }
 }
 
-
 @media (min-width: 768px) {
   .cabecalho-topo {
     position: absolute;
@@ -357,6 +356,20 @@ body {
   }
 }
 
+.video-pl {
+  background-color: var(--cor-destaque);
+  padding: 60px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.video-pl h2 {
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: var(--cor-texto);
+}
+
 /* =========================================
    RODAPÉ (Básico)
    ========================================= */
@@ -479,4 +492,33 @@ a {
 
 a:hover {
   color: #e48585;
+}
+
+/* =========================================
+   TRANSIÇÃO SUAVE 
+   ========================================= */
+
+body {
+  animation: entradaCinematica 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  opacity: 0;
+}
+
+@keyframes entradaCinematica {
+  0% {
+    opacity: 0;
+
+    transform: translateY(15px) scale(0.99);
+
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
